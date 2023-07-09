@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MUSI CONSEJOS</title>
+</head>
+<body>
+    <p>Esta sera mi pagina la cual estare actualizando, manteniendo y estar al pendiente de ella y seguirla manteniendo y cambiar algunas cosas y agregar nuevas cosas </p>
+    <p>La fecha actual es: <?php echo date('Y-m-d'); ?></p>
+    <p>Esta es mi pagina personal para ir guardando mis cosas</p>
+    <form onsubmit="guardarFrase(event)">
+        <input type="text" id="frase" placeholder="Ingresa una frase" required>
+        <button type="submit">Guardar</button>
+        
+    </form> 
+    
+    <script>
+        function guardarFrase(event) {
+            event.preventDefault();
+            var fraseInput = document.getElementById('frase');
+            var frase = fraseInput.value;
+            // Aquí puedes hacer algo con la frase, como guardarla en una base de datos o mostrarla en la página.
+            alert('Frase guardada: ' + frase);
+            fraseInput.value = '';
+        }
+    </script>
+    
+</body>
+</html>
